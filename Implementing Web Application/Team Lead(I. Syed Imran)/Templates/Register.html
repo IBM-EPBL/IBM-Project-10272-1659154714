@@ -1,0 +1,103 @@
+<html>
+  <head>
+	<title>Donor Register</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+    	body {
+ 		background-image: url("logo1.jpg");
+ 		background-color: red;
+	}
+    </script>
+  </head>
+  <body>
+<h1>Registration page</h1>
+<form class="form-horizontal" action="{{url_for('register')}}" method="POST">
+<div class="form-group">
+	<label class="control-label col-sm-2" for="pwd">Name:</label>
+	<div class="col-sm-6">
+  		<input type="text" class="form-control" id ="name" name="name" placehloder="Enter Name" required>
+    </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-2" for="pwd">Email:</label>
+  <div class="col-sm-6">
+  	<input type="email" class="form-control" id ="email" name="email" placehloder="Enter Email" required>
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-2" for="pwd">Phno:</label>
+  <div class="col-sm-6">
+      <input type="text" class="form-control" id ="phno" name="phno" placehloder="Enter Phno" required>
+    </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-2" for="pwd">Blood Group:</label>
+  <div class="col-sm-6">
+  	<select class="form-control" id="blood_group" name="blood_group">
+  		<option value="A+">A+</option>
+  		<option value="A-">A-</option>
+  		<option value="B+">B+</option>
+  		<option value="B-">B-</option>
+  		<option value="AB+">AB+</option>
+  		<option value="AB-">AB-</option>
+  		<option value="O+">O+</option>
+  		<option value="O-">O-</option>
+  		<option value="Don't know">Don't Know</option>
+  	</select>
+  </div>
+ </div>
+ <div class="form-group">
+  <label class="control-label col-sm-2" for="pwd">Weight:</label>
+  <div class="col-sm-6">
+  	<input type="text" class="form-control" id ="weight" name="weight" placehloder="Enter weight" required>
+  </div>
+</div>
+<div class="form-group">
+		<label class="control-label col-sm-2" for="pwd">Gender:</label>
+		<div class="col-sm-6">
+		<label class="radio-inline"><input type="radio" name="gender" value="Male">Male</label>
+ 		<label class="radio-inline"><input type="radio" name="gender" value="Female">Female</label>
+ 		<label class="radio-inline"><input type="radio" name="gender" value="Others">Others</label>
+ 		</div>
+</div>
+<div class="form-group">
+  		<label class="control-label col-sm-2" for="pwd">dob:</label>
+  		<div class="col-sm-6">
+  		<input type="date" class="form-control" id ="dob" name="dob" placehloder="Enter dob" required>
+  		</div>
+</div>
+<div class="form-group">
+  		<label class="control-label col-sm-2" for="Address">Address:</label>
+  		<div class="col-sm-6">
+  		<input type="text" class="form-control" id ="address" name="address" placehloder="Enter Address" required>
+  		</div>
+</div>
+<div class="form-group">
+  		<label class="control-label col-sm-2" for="adharno">Adharno:</label>
+  		<div class="col-sm-6">
+  		<input type="text" class="form-control" id ="adharno" name="adharno" placehloder="Enter Adharno" required>
+  		</div>
+</div>
+<div class="form-group">
+  		<div class="col-sm-offset-2 col-sm-10 ">
+  		<button type="submit" class="btn btn-default">Submit</button>
+		</div>
+</div>
+</form>
+  </body>
+</html>
